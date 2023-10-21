@@ -22,10 +22,14 @@ export default function MainPage() {
     };
   }, []);
 
+  /*
+        {currentScreen === 1 && <Screen1 />}
+      {currentScreen === 2 && <Screen2 />}
+  */
   return (
     <div className="main-page">
-      {currentScreen === 1 && <Screen1 />}
-      {currentScreen === 2 && <Screen2 />}
+      {" "}
+      <Screen1 />
     </div>
   );
 }
