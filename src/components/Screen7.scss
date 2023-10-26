@@ -1,4 +1,4 @@
-.screen4 {
+.screen7 {
   z-index: -1;
   display: flex;
   background: url(https://images.unsplash.com/photo-1594734415578-00fc9540929b?auto=format&fit=crop&q=80&w=1935&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
@@ -7,18 +7,18 @@
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  .cereal-container4 {
+  .cereal-container7 {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     height: 100%;
     width: 80%;
-    .cereal4 {
+    .cereal7 {
       width: 100%;
       height: 100%;
       margin-left: -600px;
       margin-bottom: 0px;
-      background: url(../img/coconut.png);
+      background: url(../img/fraise.png);
       background-size: cover;
       clip-path: circle(102.4% at 0 52%);
     }

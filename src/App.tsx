@@ -18,11 +18,25 @@ function App() {
   const hours = String(time.getHours()).padStart(2, "0");
   const minutes = String(time.getMinutes()).padStart(2, "0");
 
-
   return (
     <div className="App">
       <header className="App-header">
-        <h2>{`${hours}:${minutes}`}</h2>
+        <div id="clock">
+          <div id="h10" className="num">
+            <div className="upper">{hours[0]}</div>
+          </div>
+          <div id="h0" className="num">
+            <div className="upper">{hours[1]}</div>
+          </div>
+          <div className="colon">:</div>
+          <div id="m10" className="num">
+            <div className="upper">{minutes[0]}</div>
+
+          </div>
+          <div id="m0" className="num">
+            <div className="upper">{minutes[1]}</div>
+          </div>
+        </div>
         <MainPage />
       </header>
     </div>

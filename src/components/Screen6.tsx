@@ -1,14 +1,14 @@
 import React from "react";
-import "./Screen4.scss";
+import "./Screen6.scss";
 
-export default function Screen4() {
+export default function Screen6() {
   return (
-    <div className="screen4">
-      <div className="cereal-container4">
-        <div className="cereal4"></div>
+    <div className="screen6">
+      <div className="cereal-container6">
+        <div className="cereal6"></div>
       </div>
       <div className="wrapper">
-        <p className="text">shaker protéiné gout coco </p>
+        <p className="text">shaker protéiné Vanille </p>
         <p className="text-descriptif">
           "Découvrez son irrésistible saveur dans un shaker protéiné. Un délice
           nutritif pour un boost d'énergie optimal. Nourrissez votre corps en
