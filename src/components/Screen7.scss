@@ -2,6 +2,7 @@
 .screen7 {
   z-index: -1;
   display: flex;
+  position: absolute;
   top: 0;
   height: 100vh;
   width: 100%;
@@ -60,7 +61,8 @@
       font-family: verdana;
       font-weight: 700;
     }
-  }  .price {
+  }
+  .price {
     display: flex;
     align-items: center;
     justify-content: center;

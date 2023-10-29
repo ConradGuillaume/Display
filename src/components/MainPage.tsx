@@ -9,14 +9,7 @@ import Screen7 from "./Screen7";
 import Screen8 from "./Screen8";
 import Screen9 from "./Screen9";
 import { motion } from "framer-motion";
-import { AnimatePresence } from "framer-motion";
 import "./MainPage.scss";
-
-const screenVariants = {
-  enter: { opacity: 1, x: 0, transition: { duration: 1 } },
-  exit: { opacity: 1, x: "-100%", transition: { duration: 1 } },
-  initial: { opacity: 1, x: "100%", transition: { duration: 1 } },
-};
 
 export default function MainPage() {
   const [currentScreen, setCurrentScreen] = useState(1);
@@ -32,9 +25,6 @@ export default function MainPage() {
     };
   }, []);
 
-  const hours = String(time.getHours()).padStart(2, "0");
-  const minutes = String(time.getMinutes()).padStart(2, "0");
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentScreen((prevScreen) => (prevScreen % 9) + 1);
@@ -44,47 +34,47 @@ export default function MainPage() {
       clearInterval(interval);
     };
   }, []);
-  const renderScreen = () => {
-    return (
+
+  const hours = String(time.getHours()).padStart(2, "0");
+  const minutes = String(time.getMinutes()).padStart(2, "0");
+
+  const renderScreens = () => {
+    const screens = [
+      <Screen1 key="1" />,
+      <Screen2 key="2" />,
+      <Screen3 key="3" />,
+      <Screen4 key="4" />,
+      <Screen5 key="5" />,
+      <Screen6 key="6" />,
+      <Screen7 key="7" />,
+      <Screen8 key="8" />,
+      <Screen9 key="9" />,
+    ];
+    return screens.map((ScreenComponent, index) => (
       <motion.div
-        key={currentScreen}
+        key={index + 1}
         initial="initial"
-        animate="enter"
-        exit="exit"
-        variants={screenVariants}
-        style={{ zIndex: 0 }}
+        animate={currentScreen === index + 1 ? "enter" : "exit"}
+        variants={{
+          enter: { opacity: 1 },
+          exit: { opacity: 0 },
+        }}
+        transition={{ duration: 1 }}
+        style={{
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+        }}
       >
-        {(() => {
-          switch (currentScreen) {
-            case 1:
-              return <Screen1 />;
-            case 2:
-              return <Screen2 />;
-            case 3:
-              return <Screen3 />;
-            case 4:
-              return <Screen4 />;
-            case 5:
-              return <Screen5 />;
-            case 6:
-              return <Screen6 />;
-            case 7:
-              return <Screen7 />;
-            case 8:
-              return <Screen8 />;
-            case 9:
-              return <Screen9 />;
-            default:
-              return <Screen1 />;
-          }
-        })()}
+        {ScreenComponent}
       </motion.div>
-    );
+    ));
   };
 
   return (
     <motion.div className="main-page">
       <div id="clock">
+        {/* Clock elements go here */}
         <div id="h10" className="num">
           <div className="upper">{hours[0]}</div>
         </div>
@@ -99,7 +89,9 @@ export default function MainPage() {
           <div className="upper">{minutes[1]}</div>
         </div>
       </div>
-      <AnimatePresence>{renderScreen()}</AnimatePresence>
+      <div className="screens-container" style={{ position: "relative" }}>
+        {renderScreens()}
+      </div>
     </motion.div>
   );
 }
