@@ -1,7 +1,10 @@
 import React from "react";
 import "./Screen2.scss";
+interface Screen2Props {
+  isActive: boolean;
+}
 
-export default function Screen2() {
+export default function Screen2({ isActive }: Screen2Props) {
   return (
     <div className="all">
       <div className="screen2">

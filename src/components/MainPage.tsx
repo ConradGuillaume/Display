@@ -40,16 +40,17 @@ export default function MainPage() {
 
   const renderScreens = () => {
     const screens = [
-      <Screen1 key="1" />,
-      <Screen2 key="2" />,
-      <Screen3 key="3" />,
-      <Screen4 key="4" />,
-      <Screen5 key="5" />,
-      <Screen6 key="6" />,
-      <Screen7 key="7" />,
-      <Screen8 key="8" />,
-      <Screen9 key="9" />,
+      <Screen1 key="1" isActive={currentScreen === 1} />,
+      <Screen2 key="2" isActive={currentScreen === 2} />,
+      <Screen3 key="3" isActive={currentScreen === 3} />,
+      <Screen4 key="4" isActive={currentScreen === 4} />,
+      <Screen5 key="5" isActive={currentScreen === 5} />,
+      <Screen6 key="6" isActive={currentScreen === 6} />,
+      <Screen7 key="7" isActive={currentScreen === 7} />,
+      <Screen8 key="8" isActive={currentScreen === 8} />,
+      <Screen9 key="9" isActive={currentScreen === 9} />,
     ];
+
     return screens.map((ScreenComponent, index) => (
       <motion.div
         key={index + 1}
@@ -70,7 +71,7 @@ export default function MainPage() {
       </motion.div>
     ));
   };
-
+  //
   return (
     <motion.div className="main-page">
       <div id="clock">
@@ -92,6 +93,7 @@ export default function MainPage() {
       <div className="screens-container" style={{ position: "relative" }}>
         {renderScreens()}
       </div>
+      <div className="screen-bg"></div>
     </motion.div>
   );
 }
