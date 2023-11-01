@@ -1,28 +1,37 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./Screen2.scss";
 interface Screen2Props {
   isActive: boolean;
-}
+} // Variants pour l'animation de glissement
+const slideVariants = {
+  hidden: { x: "100vw", opacity: 0, transition: { duration: 2 } },
+  visible: { x: "0%", opacity: 1, transition: { duration: 1 } },
+};
 
 export default function Screen2({ isActive }: Screen2Props) {
   return (
     <div className="all">
       <div className="screen2">
-        <div className="wrapper1">
-          <p className="text1">
-            POUR LES FAN
-            <br /> ABSOLU D'OREO !
+        <div className="cereal-container2">
+          <div className="cereal2"></div>
+        </div>
+        <div className="wrapper">
+          <motion.span
+            className="text-wrapp"
+            initial="hidden"
+            animate={isActive ? "visible" : "hidden"}
+            variants={slideVariants}
+          >
+            <p className="text">Nos Shaker !</p>
+          </motion.span>
+          <p className="text-descriptif">
+            "Découvrez nos irrésistibles saveurs dans des shakers protéinés. Un
+            délice nutritif pour un boost d'énergie optimal. Nourrissez votre
+            corps en savourant chaque gorgée !"
           </p>
         </div>
-        <p className="text-descriptif1">
-          " Le plaisir inégalé d'un Oreo , maintenant dans une barre protéinée.
-          Le parfait équilibre entre plaisir et nutrition, conçu pour vous
-          donner le boost d'énergie dont vous avez besoin. "
-        </p>
-        <div className="cereal-container1">
-          <div className="cereal1"></div>
-        </div>
-        <div className="price1">3.50€</div>
+        <div className="price">2.50€</div>
       </div>
     </div>
   );

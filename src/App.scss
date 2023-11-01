@@ -138,6 +138,7 @@ body {
       display: flex;
       width: 80%;
       justify-content: center;
+      padding: 15px;
       align-items: center;
       text-align: center;
       margin-top: 250px;
@@ -160,8 +161,9 @@ body {
     color: rgb(0, 0, 0);
     height: 100px;
     width: 100px;
-    box-shadow: -1px 1px 6px 4px black;
-    border-radius: 40px;
-    background: $secondary;
+    background: #5e5c5c48;
+    box-shadow: 0 8px 32px 0 rgba(103, 105, 134, 0.37);
+    backdrop-filter: blur(2px);
+    border-radius: 50px;
   }
 }
