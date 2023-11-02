@@ -90,6 +90,7 @@ export default function MainPage() {
           <div className="upper">{minutes[1]}</div>
         </div>
       </div>
+      <div className="logo"></div>
       <div className="screens-container" style={{ position: "relative" }}>
         {renderScreens()}
       </div>
