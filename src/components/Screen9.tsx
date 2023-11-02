@@ -26,12 +26,14 @@ export default function Screen9({ isActive }: Screen9Props) {
             <p className="text">café</p>
           </motion.span>
           <p className="text-descriptif">
-            "Découvrez son irrésistible saveur dans un shaker protéiné. Un
-            délice nutritif pour un boost d'énergie optimal. Nourrissez votre
-            corps en savourant chaque gorgée !"
+            "Envie d'une pause café? Venez partager un moment de détente et de
+            convivialité autour d'un café fraîchement moulu. C'est l'occasion
+            parfaite pour se retrouver et échanger, le temps d'une tasse
+            aromatique. Rejoignez-nous pour une expérience caféinée inoubliable
+            !"
           </p>
         </div>
-        <div className="price">2.50€</div>
+        <div className="price">0.95€</div>
       </div>
     </div>
   );

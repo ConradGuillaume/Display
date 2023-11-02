@@ -30,9 +30,10 @@ export default function Screen3({ isActive }: Screen3Props) {
             <p className="text">chocolat</p>
           </motion.span>
           <p className="text-descriptif">
-            "Découvrez son irrésistible saveur dans un shaker protéiné. Un
-            délice nutritif pour un boost d'énergie optimal. Nourrissez votre
-            corps en savourant chaque gorgée !"
+            "Succombez à l’onctuosité de notre shake protéiné au chocolat, une
+            fusion parfaite entre gourmandise et nutrition. Un boost d’énergie
+            chocolaté pour régénérer votre corps après un entraînement intensif.
+            "
           </p>
         </div>
         <div className="price">2.50€</div>

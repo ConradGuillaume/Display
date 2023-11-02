@@ -25,9 +25,9 @@ export default function Screen6({ isActive }: Screen6Props) {
             <p className="text">vanille</p>
           </motion.span>
           <p className="text-descriptif">
-            "Découvrez son irrésistible saveur dans un shaker protéiné. Un
-            délice nutritif pour un boost d'énergie optimal. Nourrissez votre
-            corps en savourant chaque gorgée !"
+            "Plongez dans la douceur veloutée de notre shake protéiné à la
+            vanille. Un mélange raffiné de saveurs délicates et de nutrition
+            puissante, conçu pour dynamiser votre organisme."
           </p>
         </div>
         <div className="price">2.50€</div>

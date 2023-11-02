@@ -26,9 +26,9 @@ export default function Screen2({ isActive }: Screen2Props) {
             <p className="text">Nos Shakers !</p>
           </motion.span>
           <p className="text-descriptif">
-            "Découvrez nos irrésistibles saveurs dans des shakers protéinés. Un
-            délice nutritif pour un boost d'énergie optimal. Nourrissez votre
-            corps en savourant chaque gorgée !"
+            "Optimisez votre récupération après l'effort avec nos shakes
+            protéinés aux saveurs sublimes. Un régal pour vos papilles et un
+            carburant de choix pour vos muscles. "
           </p>
         </div>
         <div className="price">2.50€</div>

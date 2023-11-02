@@ -25,9 +25,10 @@ export default function Screen5({ isActive }: Screen5Props) {
             <p className="text">Cappucino</p>
           </motion.span>
           <p className="text-descriptif">
-            "Découvrez son irrésistible saveur dans un shaker protéiné. Un
-            délice nutritif pour un boost d'énergie optimal. Nourrissez votre
-            corps en savourant chaque gorgée !"
+            "Éveillez vos sens avec l'arôme envoûtant de notre shake protéiné
+            saveur cappuccino. Une pause délicieuse alliant la richesse du café
+            à la puissance des protéines, pour une recharge énergétique
+            sophistiquée."
           </p>
         </div>
         <div className="price">2.50€</div>

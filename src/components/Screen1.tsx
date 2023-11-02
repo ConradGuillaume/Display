@@ -24,9 +24,8 @@ export default function Screen1({ isActive }: Screen1Props) {
             <p className="text">Cookies</p>
           </motion.span>
           <p className="text-descriptif">
-            "Découvrez nos irrésistibles saveurs dans des shakers protéinés. Un
-            délice nutritif pour un boost d'énergie optimal. Nourrissez votre
-            corps en savourant chaque gorgée !"
+            "Découvrez nos irrésistibles saveurs dans des barres protéinés. Un
+            délice nutritif pour un boost d'énergie optimal."
           </p>
         </div>
         <div className="cereal-container">

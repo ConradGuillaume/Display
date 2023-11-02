@@ -25,9 +25,9 @@ export default function Screen7({ isActive }: Screen7Props) {
             <p className="text">fraise</p>
           </motion.span>
           <p className="text-descriptif">
-            "Découvrez son irrésistible saveur dans un shaker protéiné. Un
-            délice nutritif pour un boost d'énergie optimal. Nourrissez votre
-            corps en savourant chaque gorgée !"
+            "Redécouvrez le plaisir de l'effort avec notre shake protéiné à la
+            fraise. Une harmonie de saveurs fraîches qui se mêle à une nutrition
+            optimale, pour une expérience revitalisante."
           </p>
         </div>
         <div className="price">2.50€</div>

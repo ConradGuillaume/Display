@@ -25,9 +25,9 @@ export default function Screen8({ isActive }: Screen8Props) {
             <p className="text">banane</p>
           </motion.span>
           <p className="text-descriptif">
-            "Découvrez son irrésistible saveur dans un shaker protéiné. Un
-            délice nutritif pour un boost d'énergie optimal. Nourrissez votre
-            corps en savourant chaque gorgée !"
+            "Expérimentez le punch tropical de notre shake protéiné à la banane.
+            Une combinaison exubérante de douceur fruitée et d'énergie
+            protéinée, parfait pour un regain d'énergie post-entraînement. "
           </p>
         </div>
         <div className="price">2.50€</div>

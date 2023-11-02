@@ -30,9 +30,10 @@ export default function Screen4({ isActive }: Screen4Props) {
             <p className="text">Coco</p>
           </motion.span>
           <p className="text-descriptif">
-            "Découvrez son irrésistible saveur dans un shaker protéiné. Un
-            délice nutritif pour un boost d'énergie optimal. Nourrissez votre
-            corps en savourant chaque gorgée !"
+            "Laissez-vous transporter par la douceur tropicale de notre shake
+            protéiné à la noix de coco. Un élixir de bien-être qui combine
+            plaisir et bienfaits nutritifs, idéal pour revitaliser votre corps.
+            "
           </p>
         </div>
         <div className="price">2.50€</div>

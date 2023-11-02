@@ -1,39 +1,41 @@
 import React from "react";
-import "./Screen10.scss";
+import "./Screen11.scss";
 import { motion } from "framer-motion";
 
-interface Screen10Props {
+interface Screen11Props {
   isActive: boolean;
 }
 const slideVariants = {
   hidden: { y: "-100vh", opacity: 0, transition: { duration: 2 } },
   visible: { y: "0%", opacity: 1, transition: { duration: 1, bounce: 2 } },
 };
-export default function Screen10({ isActive }: Screen10Props) {
+export default function Screen11({ isActive }: Screen11Props) {
   return (
     <div className="all">
       <div className="screen10">
-        <div className="cereal-container10">
-          <div className="cereal10"></div>
+        <div className="cereal-container11">
+          <div className="cereal11"></div>
         </div>
         <div className="wrapper">
           <motion.span
-            className="text-wrapp1"
+            className="text-wrapp2"
             initial="hidden"
             animate={isActive ? "visible" : "hidden"}
             variants={slideVariants}
           >
-            <p className="text1">Chaussure d'intérieur</p>
+            <p className="text2">Serviettes en location</p>
           </motion.span>
           <p className="text-descriptif">
-            Veuillez noter qu'une paire de chaussure d'intérieur est obligatoire
-            afin de réaliser votre séance d'entrainement au sein de notre centre
-            de remise en forme
+            En cas d'oublis nous pouvons vous fournir une serviette en location
+            a restituer à la fin de votre séance d'entrainement
           </p>
-          <p className="thank">
-            <i>merci de votre compréhension</i>
-          </p>
+          <p className="price">1€</p>
         </div>
+        <p className="message">
+          <span className="scrolling-text">
+            Oublis de serviette = interdiction de s'entrainer
+          </span>
+        </p>
       </div>
     </div>
   );
