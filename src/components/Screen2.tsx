@@ -23,7 +23,7 @@ export default function Screen2({ isActive }: Screen2Props) {
             animate={isActive ? "visible" : "hidden"}
             variants={slideVariants}
           >
-            <p className="text">Nos Shaker !</p>
+            <p className="text">Nos Shakers !</p>
           </motion.span>
           <p className="text-descriptif">
             "Découvrez nos irrésistibles saveurs dans des shakers protéinés. Un
