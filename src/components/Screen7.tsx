@@ -8,6 +8,10 @@ const slideVariants = {
   hidden: { x: "100vw", opacity: 0, transition: { duration: 2 } },
   visible: { x: "0%", opacity: 1, transition: { duration: 1 } },
 };
+const slideVariants2 = {
+  hidden: { y: "100vh", opacity: 0, transition: { duration: 2 } },
+  visible: { y: "0%", opacity: 1, transition: { duration: 1 } },
+};
 export default function Screen7({ isActive }: Screen7Props) {
   return (
     <div className="all">
@@ -24,13 +28,23 @@ export default function Screen7({ isActive }: Screen7Props) {
           >
             <p className="text">fraise</p>
           </motion.span>
-          <p className="text-descriptif">
+          <motion.p
+            className="text-descriptif"
+            initial="hidden"
+            animate={isActive ? "visible" : "hidden"}
+            variants={slideVariants2}
+          >
             "Redécouvrez le plaisir de l'effort avec notre shake protéiné à la
             fraise. Une harmonie de saveurs fraîches qui se mêle à une nutrition
             optimale, pour une expérience revitalisante."
-          </p>
+          </motion.p>
         </div>
-        <div className="price">2.50€</div>
+        <div className="price-container">
+          <span>A L'EAU</span> <div className="price">2.50€</div>
+        </div>
+        <div className="price-container1">
+          <span>AU LAIT</span> <div className="price1">3€</div>
+        </div>
       </div>
     </div>
   );

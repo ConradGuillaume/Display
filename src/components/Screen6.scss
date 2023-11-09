@@ -23,4 +23,15 @@
       clip-path: circle(100% at 0 50%);
     }
   }
+  .text-wrapp {
+    background: linear-gradient(
+      0deg,
+      #b1a67d,
+      #f3e5ab,
+      #f9e4c5,
+      #fcf8e8,
+      #ffffff,
+      #b1a67d
+    ) !important;
+  }
 }

@@ -9,6 +9,10 @@ const slideVariants = {
   hidden: { x: "100vw", opacity: 0, transition: { duration: 2 } },
   visible: { x: "0%", opacity: 1, transition: { duration: 1 } },
 };
+const slideVariants2 = {
+  hidden: { y: "100vh", opacity: 0, transition: { duration: 2 } },
+  visible: { y: "0%", opacity: 1, transition: { duration: 1 } },
+};
 
 export default function Screen1({ isActive }: Screen1Props) {
   return (
@@ -23,15 +27,20 @@ export default function Screen1({ isActive }: Screen1Props) {
           >
             <p className="text">Cookies</p>
           </motion.span>
-          <p className="text-descriptif">
+          <motion.p
+            className="text-descriptif"
+            initial="hidden"
+            animate={isActive ? "visible" : "hidden"}
+            variants={slideVariants2}
+          >
             "Découvrez nos irrésistibles saveurs dans des barres protéinés. Un
             délice nutritif pour un boost d'énergie optimal."
-          </p>
+          </motion.p>
         </div>
         <div className="cereal-container">
           <div className="cereal"></div>
         </div>
-        <div className="price">3.50€</div>
+        <div className="price-n">3.50€</div>
       </div>
     </div>
   );

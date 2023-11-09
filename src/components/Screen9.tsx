@@ -9,6 +9,10 @@ const slideVariants = {
   hidden: { x: "100vw", opacity: 0, transition: { duration: 2 } },
   visible: { x: "0%", opacity: 1, transition: { duration: 1 } },
 };
+const slideVariants2 = {
+  hidden: { y: "100vh", opacity: 0, transition: { duration: 2 } },
+  visible: { y: "0%", opacity: 1, transition: { duration: 1 } },
+};
 export default function Screen9({ isActive }: Screen9Props) {
   return (
     <div className="all">
@@ -25,15 +29,20 @@ export default function Screen9({ isActive }: Screen9Props) {
           >
             <p className="text">café</p>
           </motion.span>
-          <p className="text-descriptif">
+          <motion.p
+            className="text-descriptif"
+            initial="hidden"
+            animate={isActive ? "visible" : "hidden"}
+            variants={slideVariants2}
+          >
             "Envie d'une pause café? Venez partager un moment de détente et de
             convivialité autour d'un café fraîchement moulu. C'est l'occasion
             parfaite pour se retrouver et échanger, le temps d'une tasse
             aromatique. Rejoignez-nous pour une expérience caféinée inoubliable
             !"
-          </p>
+          </motion.p>
         </div>
-        <div className="price">0.95€</div>
+        <div className="price-n">0.95€</div>
       </div>
     </div>
   );

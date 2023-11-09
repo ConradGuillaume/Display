@@ -30,7 +30,7 @@ export default function MainPage() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentScreen((prevScreen) => (prevScreen % 11) + 1);
-    }, 30000);
+    }, 22000);
 
     return () => {
       clearInterval(interval);
@@ -75,7 +75,7 @@ export default function MainPage() {
       </motion.div>
     ));
   };
-  //
+  //          <Screen4 key="4" isActive={true} />
   return (
     <motion.div className="main-page">
       <div id="clock">

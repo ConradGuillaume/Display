@@ -29,7 +29,7 @@ export default function Screen11({ isActive }: Screen11Props) {
             En cas d'oublis nous pouvons vous fournir une serviette en location
             a restituer à la fin de votre séance d'entrainement
           </p>
-          <p className="price">1€</p>
+          <p className="price-n">1€</p>
         </div>
         <p className="message">
           <span className="scrolling-text">
