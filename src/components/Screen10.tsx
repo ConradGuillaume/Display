@@ -9,6 +9,10 @@ const slideVariants = {
   hidden: { y: "-100vh", opacity: 0, transition: { duration: 2 } },
   visible: { y: "0%", opacity: 1, transition: { duration: 1, bounce: 2 } },
 };
+const slideVariants2 = {
+  hidden: { y: "100vh", opacity: 0, transition: { duration: 2 } },
+  visible: { y: "0%", opacity: 1, transition: { duration: 1 } },
+};
 export default function Screen10({ isActive }: Screen10Props) {
   return (
     <div className="all">
@@ -25,14 +29,24 @@ export default function Screen10({ isActive }: Screen10Props) {
           >
             <p className="text1">Chaussure d'intérieur</p>
           </motion.span>
-          <p className="text-descriptif">
+          <motion.p
+            className="text-descriptif"
+            initial="hidden"
+            animate={isActive ? "visible" : "hidden"}
+            variants={slideVariants2}
+          >
             Veuillez noter qu'une paire de chaussure d'intérieur est obligatoire
             afin de réaliser votre séance d'entrainement au sein de notre centre
             de remise en forme
-          </p>
-          <p className="thank">
+          </motion.p>
+          <motion.p
+            className="thank"
+            initial="hidden"
+            animate={isActive ? "visible" : "hidden"}
+            variants={slideVariants}
+          >
             <i>merci de votre compréhension</i>
-          </p>
+          </motion.p>
         </div>
       </div>
     </div>

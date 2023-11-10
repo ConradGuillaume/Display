@@ -20,12 +20,13 @@
       background: url(../img/serviettes.jpg);
       background-size: cover;
       background-position: 50%;
-      clip-path: circle(100% at 0 50%);
+      clip-path: polygon(-14% 105%, -14% -9%, 102% -15%, 85% 100%);
     }
   }
   .text-wrapp2 {
     position: absolute;
     top: 15%;
+    right: 11%;
     background: $primary;
     background-size: cover;
     display: flex;
@@ -51,22 +52,18 @@
     color: #000000;
   }
   .text-descriptif {
+    position: absolute;
+    top: 40%;
     display: flex;
     width: 80%;
-    justify-content: center;
-    padding: 15px;
     align-items: center;
     text-align: center;
-    margin-top: 250px;
     line-height: 38px;
     font-size: 25px;
     font-family: verdana;
     font-weight: 700;
   }
-  .thank {
-    margin-top: 20%;
-    font-size: 40px;
-  }
+
   .message {
     position: absolute;
     display: flex;

@@ -24,6 +24,7 @@ export default function Screen4({ isActive }: Screen4Props) {
         <div className="cereal-container4">
           <div className="cereal4"></div>
         </div>
+
         <div className="wrapper">
           <motion.span
             className="text-wrapp"
@@ -33,23 +34,12 @@ export default function Screen4({ isActive }: Screen4Props) {
           >
             <p className="text">Coco</p>
           </motion.span>
-          <motion.p
-            className="text-descriptif"
-            initial="hidden"
-            animate={isActive ? "visible" : "hidden"}
-            variants={slideVariants2}
-          >
-            "Laissez-vous transporter par la douceur tropicale de notre shake
-            protéiné à la noix de coco. Un élixir de bien-être qui combine
-            plaisir et bienfaits nutritifs, idéal pour revitaliser votre corps.
-            "
-          </motion.p>
         </div>
         <div className="price-container">
-          <span>A L'EAU</span> <div className="price">2.50€</div>
+          <span>EAU</span> <div className="price">2.50€</div>
         </div>
         <div className="price-container1">
-          <span>AU LAIT</span> <div className="price1">3€</div>
+          <span>LAIT</span> <div className="price1">3€</div>
         </div>
       </div>
     </div>

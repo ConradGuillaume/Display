@@ -28,16 +28,6 @@ export default function Screen7({ isActive }: Screen7Props) {
           >
             <p className="text">fraise</p>
           </motion.span>
-          <motion.p
-            className="text-descriptif"
-            initial="hidden"
-            animate={isActive ? "visible" : "hidden"}
-            variants={slideVariants2}
-          >
-            "Redécouvrez le plaisir de l'effort avec notre shake protéiné à la
-            fraise. Une harmonie de saveurs fraîches qui se mêle à une nutrition
-            optimale, pour une expérience revitalisante."
-          </motion.p>
         </div>
         <div className="price-container">
           <span>A L'EAU</span> <div className="price">2.50€</div>

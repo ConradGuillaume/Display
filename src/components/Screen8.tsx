@@ -28,16 +28,6 @@ export default function Screen8({ isActive }: Screen8Props) {
           >
             <p className="text">banane</p>
           </motion.span>
-          <motion.p
-            className="text-descriptif"
-            initial="hidden"
-            animate={isActive ? "visible" : "hidden"}
-            variants={slideVariants2}
-          >
-            "Expérimentez le punch tropical de notre shake protéiné à la banane.
-            Une combinaison exubérante de douceur fruitée et d'énergie
-            protéinée, parfait pour un regain d'énergie post-entraînement. "
-          </motion.p>
         </div>
         <div className="price-container">
           <span>A L'EAU</span> <div className="price">2.50€</div>

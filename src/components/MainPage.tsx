@@ -29,7 +29,7 @@ export default function MainPage() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentScreen((prevScreen) => (prevScreen % 11) + 1);
+      setCurrentScreen((prevScreen) => (prevScreen % 10) + 1);
     }, 22000);
 
     return () => {
@@ -42,7 +42,7 @@ export default function MainPage() {
 
   const renderScreens = () => {
     const screens = [
-      <Screen1 key="1" isActive={currentScreen === 1} />,
+      //<Screen1 key="1" isActive={currentScreen === 1} />,
       <Screen2 key="2" isActive={currentScreen === 2} />,
       <Screen3 key="3" isActive={currentScreen === 3} />,
       <Screen4 key="4" isActive={currentScreen === 4} />,
@@ -75,7 +75,7 @@ export default function MainPage() {
       </motion.div>
     ));
   };
-  //          <Screen4 key="4" isActive={true} />
+  //    {renderScreens()}
   return (
     <motion.div className="main-page">
       <div id="clock">
@@ -96,7 +96,7 @@ export default function MainPage() {
       </div>
       <div className="logo"></div>
       <div className="screens-container" style={{ position: "relative" }}>
-        {renderScreens()}
+        <Screen2 key="4" isActive={true} />
       </div>
       <div className="screen-bg"></div>
     </motion.div>

@@ -19,6 +19,7 @@ body {
   align-items: center;
   z-index: 15;
   animation: fadeOut 1s ease 40s forwards;
+  display: none;
 }
 
 .loader h1,
@@ -173,14 +174,16 @@ body {
     box-sizing: border-box;
     backdrop-filter: 2px 2px 2px black;
   }
+
   .wrapper {
     position: absolute;
+    z-index: 5;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     right: 0;
-    width: 43%;
+    width: 48%;
     height: 100%;
 
     .text-wrapp {
@@ -247,19 +250,6 @@ body {
       color: #ffffff;
       -webkit-text-stroke: 1px black;
     }
-    .text-descriptif {
-      display: flex;
-      width: 80%;
-      justify-content: center;
-      padding: 15px;
-      align-items: center;
-      text-align: center;
-      margin-top: 250px;
-      line-height: 38px;
-      font-size: 25px;
-      font-family: verdana;
-      font-weight: 700;
-    }
   }
   .price-container {
     display: flex;
@@ -272,6 +262,7 @@ body {
     font-size: 15px;
     font-family: verdana;
     font-weight: 700;
+    color: white;
     span {
       margin-bottom: 5px;
     }
@@ -302,6 +293,7 @@ body {
     font-weight: 700;
     bottom: 1%;
     right: 8%;
+    color: white;
     span {
       margin-bottom: 5px;
     }
@@ -316,7 +308,7 @@ body {
     color: rgb(0, 0, 0);
     height: 100px;
     width: 100px;
-    background: #ffffff71;
+    background: #ffffffe5;
     box-shadow: 0 8px 32px 0 rgba(77, 78, 92, 0.932);
     backdrop-filter: blur(2px);
     border-radius: 50px;

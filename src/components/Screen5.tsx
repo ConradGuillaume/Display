@@ -28,17 +28,7 @@ export default function Screen5({ isActive }: Screen5Props) {
           >
             <p className="text">Cappucino</p>
           </motion.span>
-          <motion.p
-            className="text-descriptif"
-            initial="hidden"
-            animate={isActive ? "visible" : "hidden"}
-            variants={slideVariants2}
-          >
-            "Éveillez vos sens avec l'arôme envoûtant de notre shake protéiné
-            saveur cappuccino. Une pause délicieuse alliant la richesse du café
-            à la puissance des protéines, pour une recharge énergétique
-            sophistiquée."
-          </motion.p>
+
         </div>
         <div className="price-container">
           <span>A L'EAU</span> <div className="price">2.50€</div>

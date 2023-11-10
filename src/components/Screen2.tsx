@@ -17,6 +17,26 @@ export default function Screen2({ isActive }: Screen2Props) {
   return (
     <div className="all">
       <div className="screen2">
+        <motion.p
+          className="text-descriptif"
+          initial="hidden"
+          animate={isActive ? "visible" : "hidden"}
+          variants={slideVariants2}
+        >
+          "découvrez nos shakes protéinés aux saveurs{" "}
+          <motion.span
+            animate={{ scale: [1, 1.5, 1] }} // Définit les valeurs de scale
+            transition={{
+              duration: 2, // Durée de l'animation en secondes
+              ease: "easeInOut", // Type d'animation
+              loop: Infinity, // Répète l'animation indéfiniment
+            }}
+            className="blink"
+          >
+            sublimes
+          </motion.span>
+          . "
+        </motion.p>
         <div className="cereal-container2">
           <div className="cereal2"></div>
         </div>
@@ -29,16 +49,6 @@ export default function Screen2({ isActive }: Screen2Props) {
           >
             <p className="text">Nos Shakers !</p>
           </motion.span>
-          <motion.p
-            className="text-descriptif"
-            initial="hidden"
-            animate={isActive ? "visible" : "hidden"}
-            variants={slideVariants2}
-          >
-            "Optimisez votre récupération après l'effort avec nos shakes
-            protéinés aux saveurs sublimes. Un régal pour vos papilles et un
-            carburant de choix pour vos muscles. "
-          </motion.p>
         </div>
         <div className="price-container">
           <span>A L'EAU</span> <div className="price">2.50€</div>

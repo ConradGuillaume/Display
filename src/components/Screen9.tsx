@@ -29,18 +29,6 @@ export default function Screen9({ isActive }: Screen9Props) {
           >
             <p className="text">café</p>
           </motion.span>
-          <motion.p
-            className="text-descriptif"
-            initial="hidden"
-            animate={isActive ? "visible" : "hidden"}
-            variants={slideVariants2}
-          >
-            "Envie d'une pause café? Venez partager un moment de détente et de
-            convivialité autour d'un café fraîchement moulu. C'est l'occasion
-            parfaite pour se retrouver et échanger, le temps d'une tasse
-            aromatique. Rejoignez-nous pour une expérience caféinée inoubliable
-            !"
-          </motion.p>
         </div>
         <div className="price-n">0.95€</div>
       </div>

@@ -28,16 +28,6 @@ export default function Screen6({ isActive }: Screen6Props) {
           >
             <p className="text">vanille</p>
           </motion.span>
-          <motion.p
-            className="text-descriptif"
-            initial="hidden"
-            animate={isActive ? "visible" : "hidden"}
-            variants={slideVariants2}
-          >
-            "Plongez dans la douceur veloutée de notre shake protéiné à la
-            vanille. Un mélange raffiné de saveurs délicates et de nutrition
-            puissante, conçu pour dynamiser votre organisme."
-          </motion.p>
         </div>
         <div className="price-container">
           <span>A L'EAU</span> <div className="price">2.50€</div>
