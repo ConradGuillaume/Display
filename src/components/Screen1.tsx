@@ -32,6 +32,14 @@ export default function Screen1({ isActive }: Screen1Props) {
   return (
     <div className="all">
       <div className="screen">
+        <motion.p
+          className="text-descriptif1"
+          initial="hidden"
+          animate={isActive ? "visible" : "hidden"}
+          variants={slideVariants2}
+        >
+          "Découvrez nos irrésistibles saveurs dans des barres protéinés"
+        </motion.p>
         <div className="wrapper">
           <motion.span
             className="text-wrapp"
@@ -41,15 +49,6 @@ export default function Screen1({ isActive }: Screen1Props) {
           >
             <p className="text">Cookies</p>
           </motion.span>
-          <motion.p
-            className="text-descriptif"
-            initial="hidden"
-            animate={isActive ? "visible" : "hidden"}
-            variants={slideVariants2}
-          >
-            "Découvrez nos irrésistibles saveurs dans des barres protéinés. Un
-            délice nutritif pour un boost d'énergie optimal."
-          </motion.p>
         </div>
         <div className="cereal-container">
           <motion.div

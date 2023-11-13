@@ -101,8 +101,7 @@ export default function MainPage() {
       </div>
       <div className="logo"></div>
       <div className="screens-container" style={{ position: "relative" }}>
-        {" "}
-        {renderScreens()}{" "}
+        <Screen1 key="10" isActive={true} />,
       </div>
       <div className="screen-bg"></div>
     </motion.div>
