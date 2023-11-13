@@ -12,12 +12,30 @@ const slideVariants2 = {
   hidden: { y: "100vh", opacity: 0, transition: { duration: 2 } },
   visible: { y: "0%", opacity: 1, transition: { duration: 1 } },
 };
+const zoomVariants = {
+  inactive: { scale: 1.1 },
+  active: {
+    scale: [1, 1.1], // Keyframes pour l'effet avant-arrière
+    transition: {
+      scale: {
+        duration: 24, // Durée de l'effet avant-arrière
+        ease: "linear",
+        repeat: Infinity, // Répète l'effet indéfiniment
+        repeatType: "loop", // Continue l'animation en boucle
+      },
+    },
+  },
+};
 export default function Screen6({ isActive }: Screen6Props) {
   return (
     <div className="all">
       <div className="screen6">
         <div className="cereal-container6">
-          <div className="cereal6"></div>
+          <motion.div
+            className="cereal6"
+            variants={zoomVariants}
+            animate={isActive ? "active" : "inactive"}
+          ></motion.div>
         </div>
         <div className="wrapper">
           <motion.span

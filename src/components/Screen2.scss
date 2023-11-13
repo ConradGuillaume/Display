@@ -11,14 +11,15 @@
 
   .text-descriptif {
     position: absolute;
-    top: 10%;
+    display: flex;
+    top: 11%;
     font-size: 32px;
     font-weight: 700;
     rotate: -15deg;
     color: rgb(240, 240, 240);
     text-shadow: 2px 2px 2px black;
-    .blink{
-      
+    .blink {
+      margin-left: 8px;
     }
   }
   .cereal-container2 {

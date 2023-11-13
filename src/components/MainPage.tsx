@@ -29,8 +29,8 @@ export default function MainPage() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentScreen((prevScreen) => (prevScreen % 10) + 1);
-    }, 22000);
+      setCurrentScreen((prevScreen) => (prevScreen % 11) + 1);
+    }, 24000);
 
     return () => {
       clearInterval(interval);
@@ -42,7 +42,7 @@ export default function MainPage() {
 
   const renderScreens = () => {
     const screens = [
-      //<Screen1 key="1" isActive={currentScreen === 1} />,
+      <Screen1 key="1" isActive={currentScreen === 1} />,
       <Screen2 key="2" isActive={currentScreen === 2} />,
       <Screen3 key="3" isActive={currentScreen === 3} />,
       <Screen4 key="4" isActive={currentScreen === 4} />,
@@ -59,12 +59,17 @@ export default function MainPage() {
       <motion.div
         key={index + 1}
         initial="initial"
-        animate={currentScreen === index + 1 ? "enter" : "exit"}
+        animate={currentScreen === index + 1 ? "active" : "inactive"}
         variants={{
-          enter: { opacity: 1 },
-          exit: { opacity: 0 },
+          active: { opacity: 1 }, // Léger zoom et pleine opacité pour l'écran actif
+          inactive: { opacity: 0 }, // Pas de zoom et opacité nulle pour les écrans inactifs
         }}
-        transition={{ duration: 1 }}
+        transition={{
+          opacity: {
+            duration: 1, // Durée plus courte pour l'opacité
+            ease: "easeInOut", // Transition douce pour l'opacité
+          },
+        }}
         style={{
           position: "absolute",
           width: "100%",
@@ -75,7 +80,7 @@ export default function MainPage() {
       </motion.div>
     ));
   };
-  //    {renderScreens()}
+  // {renderScreens()}         <Screen4 key="4" isActive={true} />,
   return (
     <motion.div className="main-page">
       <div id="clock">
@@ -96,7 +101,8 @@ export default function MainPage() {
       </div>
       <div className="logo"></div>
       <div className="screens-container" style={{ position: "relative" }}>
-        <Screen2 key="4" isActive={true} />
+        {" "}
+        {renderScreens()}{" "}
       </div>
       <div className="screen-bg"></div>
     </motion.div>
