@@ -19,7 +19,7 @@ const zoomVariants = {
     scale: [1, 1.1], // Keyframes pour l'effet avant-arrière
     transition: {
       scale: {
-        duration: 24, // Durée de l'effet avant-arrière
+        duration: 26, // Durée de l'effet avant-arrière
         ease: "linear",
         repeat: Infinity, // Répète l'effet indéfiniment
         repeatType: "loop", // Continue l'animation en boucle
