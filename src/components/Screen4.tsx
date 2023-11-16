@@ -39,7 +39,7 @@ export default function Screen4({ isActive }: Screen4Props) {
           <motion.div
             className="cereal4"
             variants={zoomVariants}
-            animate={isActive ? "active" : "inactive"}
+            animate={isActive ? "active" : undefined}
           ></motion.div>
         </div>
 

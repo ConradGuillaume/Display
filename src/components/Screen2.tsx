@@ -55,7 +55,7 @@ export default function Screen2({ isActive }: Screen2Props) {
           <motion.div
             className="cereal2"
             variants={zoomVariants}
-            animate={isActive ? "active" : "inactive"}
+            animate={isActive ? "active" : undefined}
           ></motion.div>
         </div>
         <div className="wrapper">

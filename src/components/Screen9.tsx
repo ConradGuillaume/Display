@@ -35,7 +35,7 @@ export default function Screen9({ isActive }: Screen9Props) {
           <motion.div
             className="cereal9"
             variants={zoomVariants}
-            animate={isActive ? "active" : "inactive"}
+            animate={isActive ? "active" : undefined}
           ></motion.div>
         </div>
         <div className="wrapper">

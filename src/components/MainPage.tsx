@@ -10,6 +10,11 @@ import Screen8 from "./Screen8";
 import Screen9 from "./Screen9";
 import Screen10 from "./Screen10";
 import Screen11 from "./Screen11";
+import Screen12 from "./Screen12";
+import Screen13 from "./Screen13";
+import Screen14 from "./Screen14";
+import Screen15 from "./Screen15";
+import Screen16 from "./Screen16";
 import { motion } from "framer-motion";
 import "./MainPage.scss";
 
@@ -29,7 +34,7 @@ export default function MainPage() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentScreen((prevScreen) => (prevScreen % 11) + 1);
+      setCurrentScreen((prevScreen) => (prevScreen % 16) + 1);
     }, 24000);
 
     return () => {
@@ -53,6 +58,11 @@ export default function MainPage() {
       <Screen9 key="9" isActive={currentScreen === 9} />,
       <Screen10 key="10" isActive={currentScreen === 10} />,
       <Screen11 key="11" isActive={currentScreen === 11} />,
+      <Screen12 key="12" isActive={currentScreen === 12} />,
+      <Screen13 key="13" isActive={currentScreen === 13} />,
+      <Screen14 key="14" isActive={currentScreen === 14} />,
+      <Screen15 key="15" isActive={currentScreen === 15} />,
+      <Screen16 key="16" isActive={currentScreen === 16} />,
     ];
 
     return screens.map((ScreenComponent, index) => (

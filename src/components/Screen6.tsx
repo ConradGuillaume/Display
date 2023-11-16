@@ -34,7 +34,7 @@ export default function Screen6({ isActive }: Screen6Props) {
           <motion.div
             className="cereal6"
             variants={zoomVariants}
-            animate={isActive ? "active" : "inactive"}
+            animate={isActive ? "active" : undefined}
           ></motion.div>
         </div>
         <div className="wrapper">

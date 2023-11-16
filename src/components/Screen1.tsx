@@ -19,7 +19,7 @@ const zoomVariants = {
     scale: [1, 1.1], // Keyframes pour l'effet avant-arrière
     transition: {
       scale: {
-        duration: 24, // Durée de l'effet avant-arrière
+        duration: 26, // Durée de l'effet avant-arrière
         ease: "linear",
         repeat: Infinity, // Répète l'effet indéfiniment
         repeatType: "loop", // Continue l'animation en boucle
@@ -54,7 +54,7 @@ export default function Screen1({ isActive }: Screen1Props) {
           <motion.div
             className="cereal"
             variants={zoomVariants}
-            animate={isActive ? "active" : "inactive"}
+            animate={isActive ? "active" : undefined}
           ></motion.div>
         </div>
         <div className="price-n">3.50€</div>

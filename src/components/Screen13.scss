@@ -1,0 +1,43 @@
+@import "../variables";
+.screen13 {
+  z-index: -1;
+  display: flex;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  .cereal-container13 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+    .cereal13 {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 0px;
+      background: url(../img/chocolat-chaud.png);
+      background-size: cover;
+    }
+  }
+  .text-wrapp {
+    background: linear-gradient(
+      0deg,
+      #1b0f0e,
+      /* presque noir */ #533529,
+      /* brun foncé */ #866651,
+      /* brun moyen */ #c89c70,
+      /* caramel */ #ecdbb6,
+      /* beige clair */ #c89c70,
+      /* caramel */ #866651,
+      /* brun moyen */ #533529,
+      /* brun foncé */ #1b0f0e /* presque noir */
+    ) !important;
+    background-size: cover;
+  }
+
+  .price-n {
+    color: white;
+  }
+}

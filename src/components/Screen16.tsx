@@ -1,13 +1,17 @@
 import React from "react";
-import "./Screen11.scss";
+import "./Screen16.scss";
 import { motion } from "framer-motion";
 
-interface Screen11Props {
+interface Screen16Props {
   isActive: boolean;
 }
 const slideVariants = {
-  hidden: { y: "-100vh", opacity: 0, transition: { duration: 2 } },
-  visible: { y: "0%", opacity: 1, transition: { duration: 1, bounce: 2 } },
+  hidden: { x: "100vw", opacity: 0, transition: { duration: 2 } },
+  visible: { x: "0%", opacity: 1, transition: { duration: 1 } },
+};
+const slideVariants2 = {
+  hidden: { y: "100vh", opacity: 0, transition: { duration: 2 } },
+  visible: { y: "0%", opacity: 1, transition: { duration: 1 } },
 };
 const zoomVariants = {
   inactive: { scale: 1.1 },
@@ -23,37 +27,28 @@ const zoomVariants = {
     },
   },
 };
-export default function Screen11({ isActive }: Screen11Props) {
+export default function Screen16({ isActive }: Screen16Props) {
   return (
     <div className="all">
-      <div className="screen10">
-        <div className="cereal-container11">
+      <div className="screen16">
+        <div className="cereal-container16">
           <motion.div
-            className="cereal11"
+            className="cereal16"
             variants={zoomVariants}
             animate={isActive ? "active" : undefined}
           ></motion.div>
         </div>
         <div className="wrapper">
           <motion.span
-            className="text-wrapp2"
+            className="text-wrapp"
             initial="hidden"
             animate={isActive ? "visible" : "hidden"}
             variants={slideVariants}
           >
-            <p className="text2">Serviettes en location</p>
+            <p className="text">PRE-WORKOUT</p>
           </motion.span>
-          <p className="text-descriptif">
-            En cas d'oublis nous pouvons vous fournir une serviette en location
-            a restituer à la fin de votre séance d'entrainement
-          </p>
-          <p className="price-n">1€</p>
         </div>
-        <p className="message">
-          <span className="scrolling-text">
-            Oublis de serviette = interdiction de s'entrainer
-          </span>
-        </p>
+        <div className="price-n">1.45€</div>
       </div>
     </div>
   );
