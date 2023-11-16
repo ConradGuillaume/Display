@@ -18,16 +18,18 @@ const slideVariants2 = {
   visible: { y: "0%", opacity: 1, transition: { duration: 1 } },
 };
 const zoomVariants = {
-  inactive: { scale: 1.1 },
-  active: {
-    scale: [1, 1.1], // Keyframes pour l'effet avant-arrière
+  inactive: {
+    scale: [1.1, 1.2],
     transition: {
-      scale: {
-        duration: 24, // Durée de l'effet avant-arrière
-        ease: "linear",
-        repeat: Infinity, // Répète l'effet indéfiniment
-        repeatType: "loop", // Continue l'animation en boucle
-      },
+      duration: 24, // Durée de l'animation jusqu'à 1.1
+      ease: "linear",
+    },
+  },
+  active: {
+    scale: [1, 1.1], // Échelle fixée à 1.1
+    transition: {
+      duration: 24, // Durée de l'animation jusqu'à 1.1
+      ease: "linear",
     },
   },
 };
@@ -39,7 +41,7 @@ export default function Screen4({ isActive }: Screen4Props) {
           <motion.div
             className="cereal4"
             variants={zoomVariants}
-            animate={isActive ? "active" : undefined}
+            animate={isActive ? "active" : "inactive"}
           ></motion.div>
         </div>
 
