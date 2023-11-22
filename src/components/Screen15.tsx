@@ -2,9 +2,7 @@ import React from "react";
 import "./Screen15.scss";
 import { motion } from "framer-motion";
 
-interface Screen15Props {
-  isActive: boolean;
-}
+
 const slideVariants = {
   hidden: { x: "100vw", opacity: 0, transition: { duration: 2 } },
   visible: { x: "0%", opacity: 1, transition: { duration: 1 } },
@@ -29,7 +27,7 @@ const zoomVariants = {
     },
   },
 };
-export default function Screen15({ isActive }: Screen15Props) {
+export default function Screen15() {
   return (
     <div className="all">
       <div className="screen15">
@@ -37,14 +35,15 @@ export default function Screen15({ isActive }: Screen15Props) {
           <motion.div
             className="cereal15"
             variants={zoomVariants}
-            animate={isActive ? "active" : "inactive"}
+            animate="active"
           ></motion.div>
         </div>
         <div className="wrapper">
           <motion.span
             className="text-wrapp"
             initial="hidden"
-            animate={isActive ? "visible" : "hidden"}
+            animate="visible"
+            exit="hidden"
             variants={slideVariants}
           >
             <p className="text">thé</p>

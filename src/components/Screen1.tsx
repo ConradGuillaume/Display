@@ -2,9 +2,6 @@ import React from "react";
 import "./Screen1.scss";
 import { motion } from "framer-motion";
 
-interface Screen1Props {
-  isActive: boolean;
-}
 const slideVariants = {
   hidden: { x: "100vw", opacity: 0, transition: { duration: 2 } },
   visible: { x: "0%", opacity: 1, transition: { duration: 1 } },
@@ -29,14 +26,14 @@ const zoomVariants = {
     },
   },
 };
-export default function Screen1({ isActive }: Screen1Props) {
+export default function Screen1() {
   return (
     <div className="all">
       <div className="screen">
         <motion.p
           className="text-descriptif1"
           initial="hidden"
-          animate={isActive ? "visible" : "hidden"}
+          animate="active"
           variants={slideVariants2}
         >
           "Découvrez nos irrésistibles saveurs dans des barres protéinés"
@@ -45,7 +42,8 @@ export default function Screen1({ isActive }: Screen1Props) {
           <motion.span
             className="text-wrapp"
             initial="hidden"
-            animate={isActive ? "visible" : "hidden"}
+            animate="visible"
+            exit="hidden"
             variants={slideVariants}
           >
             <p className="text">Cookies</p>
@@ -55,7 +53,8 @@ export default function Screen1({ isActive }: Screen1Props) {
           <motion.div
             className="cereal"
             variants={zoomVariants}
-            animate={isActive ? "active" : "inactive"}
+            animate="visible"
+            exit="hidden"
           ></motion.div>
         </div>
         <div className="price-n">3.50€</div>

@@ -45,56 +45,48 @@ export default function MainPage() {
   const hours = String(time.getHours()).padStart(2, "0");
   const minutes = String(time.getMinutes()).padStart(2, "0");
 
-  const renderScreens = () => {
-    const screens = [
-      <Screen1 key="1" isActive={currentScreen === 1} />,
-      <Screen2 key="2" isActive={currentScreen === 2} />,
-      <Screen3 key="3" isActive={currentScreen === 3} />,
-      <Screen4 key="4" isActive={currentScreen === 4} />,
-      <Screen5 key="5" isActive={currentScreen === 5} />,
-      <Screen6 key="6" isActive={currentScreen === 6} />,
-      <Screen7 key="7" isActive={currentScreen === 7} />,
-      <Screen8 key="8" isActive={currentScreen === 8} />,
-      <Screen9 key="9" isActive={currentScreen === 9} />,
-      <Screen10 key="10" isActive={currentScreen === 10} />,
-      <Screen11 key="11" isActive={currentScreen === 11} />,
-      <Screen12 key="12" isActive={currentScreen === 12} />,
-      <Screen13 key="13" isActive={currentScreen === 13} />,
-      <Screen14 key="14" isActive={currentScreen === 14} />,
-      <Screen15 key="15" isActive={currentScreen === 15} />,
-      <Screen16 key="16" isActive={currentScreen === 16} />,
-    ];
-
-    return screens.map((ScreenComponent, index) => (
-      <motion.div
-        key={index + 1}
-        initial="initial"
-        animate={currentScreen === index + 1 ? "active" : "inactive"}
-        variants={{
-          active: { opacity: 1 }, // Léger zoom et pleine opacité pour l'écran actif
-          inactive: { opacity: 0 }, // Pas de zoom et opacité nulle pour les écrans inactifs
-        }}
-        transition={{
-          opacity: {
-            duration: 1, // Durée plus courte pour l'opacité
-            ease: "easeInOut", // Transition douce pour l'opacité
-          },
-        }}
-        style={{
-          position: "absolute",
-          width: "100%",
-          height: "100%",
-        }}
-      >
-        {ScreenComponent}
-      </motion.div>
-    ));
+  const renderCurrentScreen = () => {
+    switch (currentScreen) {
+      case 1:
+        return <Screen1 />;
+      case 2:
+        return <Screen2 />;
+      case 3:
+        return <Screen3 />;
+      case 4:
+        return <Screen4 />;
+      case 5:
+        return <Screen5 />;
+      case 6:
+        return <Screen6 />;
+      case 7:
+        return <Screen7 />;
+      case 8:
+        return <Screen8 />;
+      case 9:
+        return <Screen9 />;
+      case 10:
+        return <Screen10 />;
+      case 11:
+        return <Screen11 />;
+      case 12:
+        return <Screen12 />;
+      case 13:
+        return <Screen13 />;
+      case 14:
+        return <Screen14 />;
+      case 15:
+        return <Screen15 />;
+      case 16:
+        return <Screen16 />;
+      default:
+        return null;
+    }
   };
-  // {renderScreens()}         <Screen4 key="4" isActive={true} />,
+
   return (
     <motion.div className="main-page">
       <div id="clock">
-        {/* Clock elements go here */}
         <div id="h10" className="num">
           <div className="upper">{hours[0]}</div>
         </div>
@@ -111,7 +103,7 @@ export default function MainPage() {
       </div>
       <div className="logo"></div>
       <div className="screens-container" style={{ position: "relative" }}>
-        {renderScreens()}
+        {renderCurrentScreen()}
       </div>
       <div className="screen-bg"></div>
     </motion.div>

@@ -2,9 +2,6 @@ import React from "react";
 import "./Screen10.scss";
 import { motion } from "framer-motion";
 
-interface Screen10Props {
-  isActive: boolean;
-}
 const slideVariants = {
   hidden: { y: "-100vh", opacity: 0, transition: { duration: 2 } },
   visible: { y: "0%", opacity: 1, transition: { duration: 1, bounce: 2 } },
@@ -29,7 +26,7 @@ const zoomVariants = {
     },
   },
 };
-export default function Screen10({ isActive }: Screen10Props) {
+export default function Screen10() {
   return (
     <div className="all">
       <div className="screen10">
@@ -37,14 +34,14 @@ export default function Screen10({ isActive }: Screen10Props) {
           <motion.div
             className="cereal10"
             variants={zoomVariants}
-            animate={isActive ? "active" : "inactive"}
+            animate="active"
           ></motion.div>
         </div>
         <div className="wrapper">
           <motion.span
             className="text-wrapp1"
             initial="hidden"
-            animate={isActive ? "visible" : "hidden"}
+            animate="active"
             variants={slideVariants}
           >
             <p className="text1">Chaussure d'intérieur</p>
@@ -52,7 +49,8 @@ export default function Screen10({ isActive }: Screen10Props) {
           <motion.p
             className="text-descriptif"
             initial="hidden"
-            animate={isActive ? "visible" : "hidden"}
+            animate="visible"
+            exit="hidden"
             variants={slideVariants2}
           >
             Veuillez noter qu'une paire de chaussure d'intérieur est obligatoire
@@ -62,7 +60,8 @@ export default function Screen10({ isActive }: Screen10Props) {
           <motion.p
             className="thank"
             initial="hidden"
-            animate={isActive ? "visible" : "hidden"}
+            animate="visible"
+            exit="hidden"
             variants={slideVariants}
           >
             <i>merci de votre compréhension</i>

@@ -1,9 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Screen2.scss";
-interface Screen2Props {
-  isActive: boolean;
-} // Variants pour l'animation de glissement
+
 const slideVariants = {
   hidden: { x: "100vw", opacity: 0, transition: { duration: 2 } },
   visible: { x: "0%", opacity: 1, transition: { duration: 1 } },
@@ -29,14 +27,14 @@ const zoomVariants = {
   },
 };
 
-export default function Screen2({ isActive }: Screen2Props) {
+export default function Screen2() {
   return (
     <div className="all">
       <div className="screen2">
         <motion.p
           className="text-descriptif"
           initial="hidden"
-          animate={isActive ? "visible" : "hidden"}
+          animate="active"
           variants={slideVariants2}
         >
           "découvrez nos shakes protéinés aux saveurs{" "}
@@ -57,14 +55,16 @@ export default function Screen2({ isActive }: Screen2Props) {
           <motion.div
             className="cereal2"
             variants={zoomVariants}
-            animate={isActive ? "active" : "inactive"}
+            animate="visible"
+            exit="hidden"
           ></motion.div>
         </div>
         <div className="wrapper">
           <motion.span
             className="text-wrapp"
             initial="hidden"
-            animate={isActive ? "visible" : "hidden"}
+            animate="visible"
+            exit="hidden"
             variants={slideVariants}
           >
             <p className="text">Nos Shakers !</p>

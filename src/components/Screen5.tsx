@@ -1,9 +1,7 @@
 import React from "react";
 import "./Screen5.scss";
 import { motion } from "framer-motion";
-interface Screen5Props {
-  isActive: boolean;
-}
+
 const slideVariants = {
   hidden: { x: "100vw", opacity: 0, transition: { duration: 2 } },
   visible: { x: "0%", opacity: 1, transition: { duration: 1 } },
@@ -28,7 +26,7 @@ const zoomVariants = {
     },
   },
 };
-export default function Screen5({ isActive }: Screen5Props) {
+export default function Screen5() {
   return (
     <div className="all">
       <div className="screen5">
@@ -36,14 +34,15 @@ export default function Screen5({ isActive }: Screen5Props) {
           <motion.div
             className="cereal5"
             variants={zoomVariants}
-            animate={isActive ? "active" : "inactive"}
+            animate="active"
           ></motion.div>
         </div>
         <div className="wrapper">
           <motion.span
             className="text-wrapp"
             initial="hidden"
-            animate={isActive ? "visible" : "hidden"}
+            animate="visible"
+            exit="hidden"
             variants={slideVariants}
           >
             <p className="text">Cappucino</p>

@@ -2,9 +2,7 @@ import React from "react";
 import "./Screen11.scss";
 import { motion } from "framer-motion";
 
-interface Screen11Props {
-  isActive: boolean;
-}
+
 const slideVariants = {
   hidden: { y: "-100vh", opacity: 0, transition: { duration: 2 } },
   visible: { y: "0%", opacity: 1, transition: { duration: 1, bounce: 2 } },
@@ -25,7 +23,7 @@ const zoomVariants = {
     },
   },
 };
-export default function Screen11({ isActive }: Screen11Props) {
+export default function Screen11() {
   return (
     <div className="all">
       <div className="screen10">
@@ -33,14 +31,15 @@ export default function Screen11({ isActive }: Screen11Props) {
           <motion.div
             className="cereal11"
             variants={zoomVariants}
-            animate={isActive ? "active" : "inactive"}
+            animate="active"
           ></motion.div>
         </div>
         <div className="wrapper">
           <motion.span
             className="text-wrapp2"
             initial="hidden"
-            animate={isActive ? "visible" : "hidden"}
+            animate="visible"
+            exit="hidden"
             variants={slideVariants}
           >
             <p className="text2">Serviettes en location</p>

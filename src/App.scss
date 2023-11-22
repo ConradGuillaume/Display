@@ -8,18 +8,7 @@ body {
   padding: 0;
   box-sizing: border-box; // not neccesary
 }
-.loader {
-  /* Vos styles existants */
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 15;
-  animation: fadeOut 1s ease 40s forwards;
-}
+
 
 .loader h1,
 .loader .more {

@@ -1,13 +1,7 @@
 import { motion } from "framer-motion";
 import "./Screen3.scss";
 
-interface Screen3Props {
-  isActive: boolean;
-}
-
-export default function Screen3({ isActive }: Screen3Props) {
-  console.log("is", isActive);
-
+export default function Screen3() {
   // Variants pour l'animation de glissement
   const slideVariants = {
     hidden: { x: "100vw", opacity: 0, transition: { duration: 2 } },
@@ -40,14 +34,15 @@ export default function Screen3({ isActive }: Screen3Props) {
           <motion.div
             className="cereal3"
             variants={zoomVariants}
-            animate={isActive ? "active" : "inactive"}
+            animate="active"
           ></motion.div>
         </div>
         <div className="wrapper">
           <motion.span
             className="text-wrapp"
             initial="hidden"
-            animate={isActive ? "visible" : "hidden"}
+            animate="visible"
+            exit="hidden"
             variants={slideVariants}
           >
             <p className="text">chocolat</p>
