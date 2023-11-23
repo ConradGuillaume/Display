@@ -147,9 +147,7 @@ export default function MainPage() {
       </div>
       <div className="logo"></div>
       <div className="screens-container">
-        <AnimatePresence>
-          <Screen13 />
-        </AnimatePresence>
+        <AnimatePresence>{renderCurrentScreen()}</AnimatePresence>
       </div>
     </motion.div>
   );
