@@ -31,42 +31,15 @@ export default function Screen2() {
   return (
     <div className="all">
       <div className="screen2">
-        <motion.p
-          className="text-descriptif"
-          initial="hidden"
-          animate="active"
-          variants={slideVariants2}
-        >
+        <motion.p className="text-descriptif">
           "découvrez nos shakes protéinés aux saveurs{" "}
-          <motion.div
-            animate={{ scale: [1, 1.03, 1] }} // Définit les valeurs de scale
-            transition={{
-              duration: 2, // Durée de l'animation en secondes
-              ease: "easeInOut", // Type d'animation
-              repeat: Infinity, // Répète l'animation indéfiniment
-            }}
-            className="blink"
-          >
-            sublimes
-          </motion.div>
-          . "
+          <motion.div className="blink">sublimes</motion.div>. "
         </motion.p>
         <div className="cereal-container2">
-          <motion.div
-            className="cereal2"
-            variants={zoomVariants}
-            animate="visible"
-            exit="hidden"
-          ></motion.div>
+          <motion.div className="cereal2"></motion.div>
         </div>
         <div className="wrapper">
-          <motion.span
-            className="text-wrapp"
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            variants={slideVariants}
-          >
+          <motion.span className="text-wrapp">
             <p className="text">Nos Shakers !</p>
           </motion.span>
         </div>

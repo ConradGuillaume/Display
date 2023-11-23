@@ -17,8 +17,9 @@
       width: 100%;
       height: 100%;
       margin-bottom: 0px;
-      background: url(../img/vanille.webp);
+      background: url(https://raw.githubusercontent.com/ConradGuillaume/Display/main/src/img/vanille.webp?token=GHSAT0AAAAAACKU7FVEJ4Y6O3AHW2GBOWQAZK7CKEQ);
       background-size: cover;
+      animation: zoomIn 20s ease-in-out forwards;
     }
   }
   .text-wrapp {

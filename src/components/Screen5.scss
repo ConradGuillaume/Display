@@ -17,10 +17,10 @@
       width: 100%;
       height: 100%;
       margin-bottom: 0px;
-      background: url(../img/cappucino.webp);
+      background: url(https://raw.githubusercontent.com/ConradGuillaume/Display/main/src/img/cappucino.webp?token=GHSAT0AAAAAACKU7FVFCVGIWKEJIBJ54LT2ZK7CJLQ);
       background-size: cover;
       background-position: 50%;
-     // clip-path: circle(100% at 0 50%);
+      animation: zoomIn 20s ease-in-out forwards;
     }
   }
   .text-wrapp {

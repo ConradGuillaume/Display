@@ -9,7 +9,6 @@ body {
   box-sizing: border-box; // not neccesary
 }
 
-
 .loader h1,
 .loader .more {
   /* Styles communs pour h1 et .more */
@@ -319,5 +318,13 @@ body {
     box-shadow: 0 8px 32px 0 rgba(46, 46, 56, 0.37);
     backdrop-filter: blur(2px);
     border-radius: 50px;
+  }
+  @keyframes zoomIn {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
   }
 }

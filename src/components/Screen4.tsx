@@ -6,7 +6,6 @@ const titleAnimation = {
   visible: { opacity: 1, y: 0 },
 };
 
-
 const slideVariants = {
   hidden: { x: "100vw", opacity: 0, transition: { duration: 2 } },
   visible: { x: "0%", opacity: 1, transition: { duration: 1 } },
@@ -36,21 +35,11 @@ export default function Screen4() {
     <motion.div className="all">
       <div className="screen4">
         <div className="cereal-container4">
-          <motion.div
-            className="cereal4"
-            variants={zoomVariants}
-            animate="active"
-          ></motion.div>
+          <motion.div className="cereal4"></motion.div>
         </div>
 
         <div className="wrapper">
-          <motion.span
-            className="text-wrapp"
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            variants={slideVariants}
-          >
+          <motion.span className="text-wrapp">
             <p className="text">Coco</p>
           </motion.span>
         </div>

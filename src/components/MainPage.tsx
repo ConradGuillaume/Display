@@ -15,12 +15,26 @@ import Screen13 from "./Screen13";
 import Screen14 from "./Screen14";
 import Screen15 from "./Screen15";
 import Screen16 from "./Screen16";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import "./MainPage.scss";
 
 export default function MainPage() {
   const [currentScreen, setCurrentScreen] = useState(1);
   const [time, setTime] = useState(new Date());
+  const fadeVariants = {
+    initial: {
+      opacity: 0,
+      transition: { duration: 1.5, ease: "easeInOut" }, // Ajoutez la durée et d'autres paramètres ici si nécessaire
+    },
+    in: {
+      opacity: 1,
+      transition: { duration: 1.5, ease: "easeInOut" }, // Durée pour l'animation d'entrée
+    },
+    out: {
+      opacity: 0,
+      transition: { duration: 1.5, ease: "easeInOut" }, // Durée pour l'animation de sortie
+    },
+  };
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -35,7 +49,7 @@ export default function MainPage() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentScreen((prevScreen) => (prevScreen % 16) + 1);
-    }, 24000);
+    }, 20000);
 
     return () => {
       clearInterval(interval);
@@ -46,44 +60,74 @@ export default function MainPage() {
   const minutes = String(time.getMinutes()).padStart(2, "0");
 
   const renderCurrentScreen = () => {
+    let ScreenComponent;
     switch (currentScreen) {
       case 1:
-        return <Screen1 />;
+        ScreenComponent = <Screen1 />;
+        break;
       case 2:
-        return <Screen2 />;
+        ScreenComponent = <Screen2 />;
+        break;
       case 3:
-        return <Screen3 />;
+        ScreenComponent = <Screen3 />;
+        break;
       case 4:
-        return <Screen4 />;
+        ScreenComponent = <Screen4 />;
+        break;
       case 5:
-        return <Screen5 />;
+        ScreenComponent = <Screen5 />;
+        break;
       case 6:
-        return <Screen6 />;
+        ScreenComponent = <Screen6 />;
+        break;
       case 7:
-        return <Screen7 />;
+        ScreenComponent = <Screen7 />;
+        break;
       case 8:
-        return <Screen8 />;
+        ScreenComponent = <Screen8 />;
+        break;
       case 9:
-        return <Screen9 />;
+        ScreenComponent = <Screen9 />;
+        break;
       case 10:
-        return <Screen10 />;
+        ScreenComponent = <Screen10 />;
+        break;
       case 11:
-        return <Screen11 />;
+        ScreenComponent = <Screen11 />;
+        break;
       case 12:
-        return <Screen12 />;
+        ScreenComponent = <Screen12 />;
+        break;
       case 13:
-        return <Screen13 />;
+        ScreenComponent = <Screen13 />;
+        break;
       case 14:
-        return <Screen14 />;
+        ScreenComponent = <Screen14 />;
+        break;
       case 15:
-        return <Screen15 />;
+        ScreenComponent = <Screen15 />;
+        break;
       case 16:
-        return <Screen16 />;
+        ScreenComponent = <Screen16 />;
+        break;
       default:
-        return null;
+        ScreenComponent = null;
     }
-  };
 
+    return (
+      <motion.div
+        key={currentScreen}
+        initial="initial"
+        animate="in"
+        exit="out"
+        variants={fadeVariants}
+        transition={{ duration: 1.5 }}
+      >
+        {ScreenComponent}
+      </motion.div>
+    );
+  };
+  // {renderCurrentScreen()}
   return (
     <motion.div className="main-page">
       <div id="clock">
@@ -102,10 +146,9 @@ export default function MainPage() {
         </div>
       </div>
       <div className="logo"></div>
-      <div className="screens-container" style={{ position: "relative" }}>
-        {renderCurrentScreen()}
+      <div className="screens-container">
+        <AnimatePresence>{renderCurrentScreen()}</AnimatePresence>
       </div>
-      <div className="screen-bg"></div>
     </motion.div>
   );
 }

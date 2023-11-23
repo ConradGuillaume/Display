@@ -9,7 +9,7 @@
   overflow: hidden;
   .wrapper {
     z-index: -1;
-    background: url(../img/bg-1.webp);
+    background: url(https://raw.githubusercontent.com/ConradGuillaume/Display/main/src/img/bg-1.webp?token=GHSAT0AAAAAACKU7FVFQI7S6QUC4GDXEOHYZK7CMUQ);
     background-size: cover;
   }
   .cereal-container11 {
@@ -22,10 +22,11 @@
       width: 100%;
       height: 100%;
       margin-bottom: 0px;
-      background: url(../img/serviettes.jpg);
+      background: url(https://github.com/ConradGuillaume/Display/blob/main/src/img/serviettes.jpg?raw=true);
       background-size: cover;
       background-position: 50%;
       clip-path: polygon(-14% 105%, -14% -9%, 102% -15%, 85% 100%);
+      animation: zoomIn 20s ease-in-out forwards;
     }
   }
   .text-wrapp2 {

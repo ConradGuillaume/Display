@@ -31,39 +31,18 @@ export default function Screen10() {
     <div className="all">
       <div className="screen10">
         <div className="cereal-container10">
-          <motion.div
-            className="cereal10"
-            variants={zoomVariants}
-            animate="active"
-          ></motion.div>
+          <motion.div className="cereal10"></motion.div>
         </div>
         <div className="wrapper">
-          <motion.span
-            className="text-wrapp1"
-            initial="hidden"
-            animate="active"
-            variants={slideVariants}
-          >
+          <motion.span className="text-wrapp1">
             <p className="text1">Chaussure d'intérieur</p>
           </motion.span>
-          <motion.p
-            className="text-descriptif"
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            variants={slideVariants2}
-          >
+          <motion.p className="text-descriptif" initial="hidden">
             Veuillez noter qu'une paire de chaussure d'intérieur est obligatoire
             afin de réaliser votre séance d'entrainement au sein de notre centre
             de remise en forme
           </motion.p>
-          <motion.p
-            className="thank"
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            variants={slideVariants}
-          >
+          <motion.p className="thank" initial="hidden">
             <i>merci de votre compréhension</i>
           </motion.p>
         </div>

@@ -17,8 +17,9 @@
       width: 100%;
       height: 100%;
       margin-bottom: 0px;
-      background: url(../img/pre-workout.png);
+      background: url(https://github.com/ConradGuillaume/Display/blob/main/src/img/pre-workout.png?raw=true);
       background-size: cover;
+      animation: zoomIn 20s ease-in-out forwards;
     }
   }
   .text-wrapp {
@@ -33,7 +34,6 @@
       /* couleur intermédiaire */ #000000 100% /* fin avec noir */
     ) !important;
   }
-
 
   .price-n {
     color: white;

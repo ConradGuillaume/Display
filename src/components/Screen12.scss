@@ -17,8 +17,10 @@
       width: 100%;
       height: 100%;
       margin-bottom: 0px;
-      background: url(../img/latte-mach.png);
+      background: url(https://github.com/ConradGuillaume/Display/blob/main/src/img/latte-mach.png?raw=true);
       background-size: cover;
+      animation: zoomIn 20s ease-in-out forwards;
+      
     }
   }
   .text-wrapp {
