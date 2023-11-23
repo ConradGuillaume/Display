@@ -34,11 +34,12 @@
       margin-bottom: 0px;
       background: url(https://raw.githubusercontent.com/ConradGuillaume/Display/main/src/img/all.png?token=GHSAT0AAAAAACKU7FVFPPDNR45FEE76ZN34ZK7CE3Q);
       background-size: 100%;
-      animation: zoomIn 20s ease-in-out forwards;
+      animation: zoomIn 25s linear forwards;
     }
   }
   .text-wrapp {
     top: 10% !important;
     background: linear-gradient(0deg, #000000, #c0c0c0) !important;
+    animation: slideInFromRight 1s ease-out forwards;
   }
 }

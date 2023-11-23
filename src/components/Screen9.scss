@@ -19,7 +19,7 @@
       margin-bottom: 0px;
       background: url(https://raw.githubusercontent.com/ConradGuillaume/Display/main/src/img/caf%C3%A9.webp?token=GHSAT0AAAAAACKU7FVEZR47A66EWNDU7JU6ZK7CLXQ);
       background-size: cover;
-      animation: zoomIn 20s ease-in-out forwards;
+      animation: zoomIn 25s linear forwards;
     }
   }
   .text-wrapp {
@@ -33,6 +33,7 @@
       #a47e5b,
       #fff1e0
     ) !important;
+    animation: slideInFromRight 1s ease-out forwards;
   }
   .price-n {
     color: white;

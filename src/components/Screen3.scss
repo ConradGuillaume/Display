@@ -21,7 +21,7 @@
       background: url(https://raw.githubusercontent.com/ConradGuillaume/Display/main/src/img/chocolate.webp?token=GHSAT0AAAAAACKU7FVFF7HRKS226ERYPXT6ZK7CHUQ);
       background-size: cover;
       background-position: 50%;
-      animation: zoomIn 20s ease-in-out forwards;
+      animation: zoomIn 25s linear forwards;
     }
   }
   .text-wrapp {
@@ -32,5 +32,6 @@
       #cd853f,
       #f1e0d6
     ) !important;
+    animation: slideInFromRight 1s ease-out forwards;
   }
 }

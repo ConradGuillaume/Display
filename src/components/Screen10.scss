@@ -30,7 +30,7 @@
       background-size: cover;
       background-position: 100%;
       clip-path: polygon(-14% 105%, -14% -9%, 102% -15%, 85% 100%);
-      animation: zoomIn 20s ease-in-out forwards;
+      animation: zoomIn 25s linear forwards;
     }
   }
   .text-wrapp1 {
@@ -46,6 +46,7 @@
     width: 450px;
     padding: 30px;
     border-radius: 79% 21% 70% 30% / 41% 75% 25% 59%;
+    animation: slideInFromRight 1s ease-out forwards;
   }
   .text1 {
     display: flex;

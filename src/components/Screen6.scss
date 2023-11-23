@@ -19,7 +19,7 @@
       margin-bottom: 0px;
       background: url(https://raw.githubusercontent.com/ConradGuillaume/Display/main/src/img/vanille.webp?token=GHSAT0AAAAAACKU7FVEJ4Y6O3AHW2GBOWQAZK7CKEQ);
       background-size: cover;
-      animation: zoomIn 20s ease-in-out forwards;
+      animation: zoomIn 25s linear forwards;
     }
   }
   .text-wrapp {
@@ -32,5 +32,6 @@
       #ffffff,
       #b1a67d
     ) !important;
+    animation: slideInFromRight 1s ease-out forwards;
   }
 }

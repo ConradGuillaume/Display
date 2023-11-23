@@ -19,7 +19,7 @@
       margin-bottom: 0px;
       background: url(https://github.com/ConradGuillaume/Display/blob/main/src/img/the.png?raw=true);
       background-size: cover;
-      animation: zoomIn 20s ease-in-out forwards;
+      animation: zoomIn 25s linear forwards;
     }
   }
   .text-wrapp {
@@ -34,6 +34,7 @@
       /* brun rougeâtre */ #312017 /* brun très foncé */
     ) !important;
     background-size: cover;
+    animation: slideInFromRight 1s ease-out forwards;
   }
 
   .price-n {
