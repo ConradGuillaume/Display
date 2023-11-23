@@ -6,9 +6,6 @@ export default function Screen1() {
   return (
     <div className="all">
       <div className="screen">
-        <motion.p className="text-descriptif1">
-          "Découvrez nos irrésistibles saveurs dans des barres protéinés"
-        </motion.p>
         <div className="wrapper">
           <motion.span className="text-wrapp">
             <p className="text">Cookies</p>

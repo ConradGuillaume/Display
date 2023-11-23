@@ -31,10 +31,6 @@ export default function Screen2() {
   return (
     <div className="all">
       <div className="screen2">
-        <motion.p className="text-descriptif">
-          "découvrez nos shakes protéinés aux saveurs{" "}
-          <motion.div className="blink">sublimes</motion.div>. "
-        </motion.p>
         <div className="cereal-container2">
           <motion.div className="cereal2"></motion.div>
         </div>
