@@ -20,7 +20,6 @@
       margin-bottom: 0px;
       background: url(https://global-uploads.webflow.com/638ef3c90c69ee07f34464b5/65097e04984cb56f46f5d865_B55_CookieDough.jpg);
       background-size: cover;
-      animation: zoomIn 25s linear forwards;
     }
   }
   .text-descriptif1 {
@@ -34,7 +33,8 @@
     color: rgb(255, 255, 255);
     z-index: 5;
   }
-  .price-n {
+  .price-n{
+    
   }
   .text-wrapp {
     background: linear-gradient(
@@ -45,6 +45,5 @@
       #700000,
       #ac0000
     ) !important;
-    animation: slideInFromRight 1s ease-out forwards;
   }
 }

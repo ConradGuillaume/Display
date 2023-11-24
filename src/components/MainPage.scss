@@ -3,13 +3,8 @@
 #clock {
   z-index: 5;
 }
-.screens-container {
-  height: 100vh !important;
-  width: 100% !important;
-}
 .screen-bg {
-  // background: url(../img/bg-1.webp);
-  background: #000 !important;
+ // background: url(../img/bg-1.webp);
   background-size: cover;
   position: absolute;
   z-index: -2;

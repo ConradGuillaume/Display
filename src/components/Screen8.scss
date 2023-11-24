@@ -17,9 +17,8 @@
       width: 100%;
       height: 100%;
       margin-bottom: 0px;
-      background: url(https://raw.githubusercontent.com/ConradGuillaume/Display/main/src/img/banane.webp?token=GHSAT0AAAAAACKU7FVEEHFDHOQBYSNR7XG4ZK7CLBA);
+      background: url(../img/banane.webp);
       background-size: cover;
-      animation: zoomIn 25s linear forwards;
     }
   }
   .text-wrapp {
@@ -31,6 +30,5 @@
       #fff68f,
       #00000062
     ) !important;
-    animation: slideInFromRight 1s ease-out forwards;
   }
 }

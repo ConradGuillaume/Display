@@ -17,9 +17,8 @@
       width: 100%;
       height: 100%;
       margin-bottom: 0px;
-      background: url(https://github.com/ConradGuillaume/Display/blob/main/src/img/cappucino.png?raw=true);
+      background: url(../img/cappucino.png);
       background-size: cover;
-      animation: zoomIn 25s linear forwards;
     }
   }
   .text-wrapp {
@@ -33,7 +32,6 @@
       #a47e5b,
       #fff1e0
     ) !important;
-    animation: slideInFromRight 1s ease-out forwards;
   }
   .price-n {
     color: white;

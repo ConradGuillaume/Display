@@ -17,9 +17,8 @@
       width: 100%;
       height: 100%;
       margin-bottom: 0px;
-      background: url(https://github.com/ConradGuillaume/Display/blob/main/src/img/latte-mach.png?raw=true);
+      background: url(../img/latte-mach.png);
       background-size: cover;
-      animation: zoomIn 25s linear forwards;
     }
   }
   .text-wrapp {
@@ -36,7 +35,6 @@
       /* brun foncé */ #1b0f0e /* presque noir */
     ) !important;
     background-size: cover;
-    animation: slideInFromRight 1s ease-out forwards;
   }
 
   .price-n {

@@ -18,10 +18,10 @@
       width: 100%;
       height: 100%;
       margin-bottom: 0px;
-      background: url(https://raw.githubusercontent.com/ConradGuillaume/Display/main/src/img/coconut.webp?token=GHSAT0AAAAAACKU7FVEXERCDMSCSAKOQN3MZK7CJBA);
+      background: url(../img/coconut.webp);
       background-size: 100%;
       background-position: 0px 0px;
-      animation: zoomIn 25s linear forwards;
+      //clip-path: circle(100% at 0 50%);
     }
   }
   .text-wrapp {
@@ -33,6 +33,5 @@
       #f5deb3,
       #fff0da
     ) !important;
-    animation: slideInFromRight 1s ease-out forwards;
   }
 }

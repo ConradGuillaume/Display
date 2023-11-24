@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap");
 
 body {
+  background: #1a1a1a;
 }
 * {
   margin: 0;
@@ -323,14 +324,7 @@ body {
     backdrop-filter: blur(2px);
     border-radius: 50px;
   }
-  @keyframes zoomIn {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(1.1);
-    }
-  }
+
   @keyframes slideInFromRight {
     from {
       transform: translateX(100%);

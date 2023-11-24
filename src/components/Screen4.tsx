@@ -6,6 +6,9 @@ const titleAnimation = {
   visible: { opacity: 1, y: 0 },
 };
 
+interface Screen4Props {
+  isActive: boolean;
+}
 const slideVariants = {
   hidden: { x: "100vw", opacity: 0, transition: { duration: 2 } },
   visible: { x: "0%", opacity: 1, transition: { duration: 1 } },
@@ -30,16 +33,25 @@ const zoomVariants = {
     },
   },
 };
-export default function Screen4() {
+export default function Screen4({ isActive }: Screen4Props) {
   return (
     <motion.div className="all">
       <div className="screen4">
         <div className="cereal-container4">
-          <motion.div className="cereal4"></motion.div>
+          <motion.div
+            className="cereal4"
+            variants={zoomVariants}
+            animate={isActive ? "active" : "inactive"}
+          ></motion.div>
         </div>
 
         <div className="wrapper">
-          <motion.span className="text-wrapp">
+          <motion.span
+            className="text-wrapp"
+            initial="hidden"
+            animate={isActive ? "visible" : "hidden"}
+            variants={slideVariants}
+          >
             <p className="text">Coco</p>
           </motion.span>
         </div>
